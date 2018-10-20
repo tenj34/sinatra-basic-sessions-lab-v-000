@@ -5,4 +5,8 @@ class App < Sinatra::Base
     enable :sessions
     set :session_secret, "o2i4n034nfr0943nwef0n"
   end
+
+  get '/' do
+    @session = session
+  end
 end
